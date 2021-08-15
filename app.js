@@ -1,10 +1,31 @@
-var profileDataArgs = process.argv.slice(2, process.argv.length);
-console.log(profileDataArgs);
- 
-const printProfileData = profileDataArr => {
-  profileDataArr.forEach(profileItem => console.log(profileItem));
-}
+const inquirer = require('inquirer');
+ const fs = require('fs');
+// const generatePage = require('./src/page-template');
 
-  console.log('================');
+// const pageHTML = generatePage(name, github);
 
-  printProfileData(profileDataArgs);
+// fs.writeFile('./index.html', pageHTML, err => {
+//   if (err) throw err;
+
+//   console.log('Portfolio complete! Check out index.html to see the output!');
+// });
+
+inquirer
+  .prompt([
+  {
+    type: 'input',
+    name: 'name',
+    message: 'What is your name?'
+  }
+  ])
+  .then((answers) => {
+    // Use user feedback for... whatever!!
+   console.log("answers", answers);
+  })
+  .catch((error) => {
+    if (error.isTtyError) {
+      // Prompt couldn't be rendered in the current environment
+    } else {
+      // Something else went wrong
+    }
+  });
