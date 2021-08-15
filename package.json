@@ -1,25 +1,19 @@
 {
-  "name": "portfolio-generator",
+  "name": "project",
   "version": "1.0.0",
-  "description": "creates portfolio",
+  "description": "",
   "main": "app.js",
+  "directories": {
+    "lib": "lib"
+  },
   "scripts": {
-    "test": "test"
+    "test": "node ./test/sample.js",
+    "start": "node app.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/jaya1983/portfolio-generator.git"
-  },
-  "keywords": [
-    "portfolio"
-  ],
-  "author": "Jaya",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jaya1983/portfolio-generator/issues"
-  },
-  "homepage": "https://github.com/jaya1983/portfolio-generator#readme",
   "dependencies": {
-    "inquirer": "^8.1.2"
+    "inquirer": "^7.0.3"
   }
 }
